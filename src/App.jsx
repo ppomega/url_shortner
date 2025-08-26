@@ -9,7 +9,7 @@ function App() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "urlshortnerback-production.up.railway.app/api/shorten",
+        "https://urlshortnerback-production.up.railway.app/api/shorten",
         {
           url: inputValue,
         }
