@@ -8,9 +8,12 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8000/api/shorten", {
-        url: inputValue,
-      });
+      const res = await axios.post(
+        "urlshortnerback-production.up.railway.app/api/shorten",
+        {
+          url: inputValue,
+        }
+      );
       const data = await res.data;
 
       if (Array.isArray(data)) {
